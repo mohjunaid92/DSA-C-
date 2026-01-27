@@ -7,7 +7,7 @@ class Ammout {
     public:
     // constructor
     Ammout(){
-        account =  0;
+        account =  09;
     }
     void balanace(int balanace){
         account += balanace;

@@ -14,7 +14,7 @@ class Ammout {
     }
     void check(){
 
-        cout<<"your balance is "<<account;
+        cout<<"your balance  "<<account;
     }
 };
 int main(){

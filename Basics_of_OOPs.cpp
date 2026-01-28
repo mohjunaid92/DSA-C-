@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
 
 class Ammout {
@@ -7,7 +8,7 @@ class Ammout {
     public:
     // constructor
     Ammout(){
-        account =  09;
+       
     }
     void balanace(int balanace){
         account += balanace;
@@ -18,10 +19,16 @@ class Ammout {
     }
 };
 int main(){
-    Ammout s1;
-    s1.balanace(200);
-    s1.check();
+    char str[] = "ababab";
+    char sub[] = "ab";
+    char *ptr = str;
+    int val = 0;
+    while( ( ptr = strstr(ptr, sub) ) != NULL){
+        val++;
+        ptr++;
 
+    }
+    cout<<val;
    
    
 }

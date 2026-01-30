@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string.h>
+#include<ctype.h>
 using namespace std;
 
 class Ammout {
@@ -18,17 +19,49 @@ class Ammout {
         cout<<"your balance  "<<account;
     }
 };
-int main(){
-    char str[] = "ababab";
-    char sub[] = "ab";
-    char *ptr = str;
-    int val = 0;
-    while( ( ptr = strstr(ptr, sub) ) != NULL){
-        val++;
-        ptr++;
 
+bool prime(int val){
+    if( val == 1 || val == 0){
+        return true;
     }
-    cout<<val;
-   
-   
+
+    for(int i = 2; i<val; i++){
+        if( i % 2 == 0){
+            return false;
+        }
+    }
+    return true;
+
+
+}
+int big(int a, int b, int c){
+    if( a> b){
+        if( a>c){
+            return a;
+        } else {
+           return c;
+        }
+    } else {
+        if( b > c){
+            return b;
+        } else {
+            return c;
+        }
+    }
+    return -1;
+}
+int main(){
+    char str[]= "abababab";
+    char sub[]= "ab";
+    char* ptr = str;
+    int count = 0;
+    while((ptr = strstr(ptr,sub))!=NULL){
+        count++;
+        ptr++;
+    }
+    //cout<<prime(2);
+     cout<<big( 3,6,1);
+     int a = 10, b = 11, c = 12;
+     int big = ( a > b)?((a >c)?a:c): ((b > c)?b:c);
+     cout<<big;
 }

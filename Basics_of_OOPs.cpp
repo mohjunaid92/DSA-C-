@@ -59,7 +59,7 @@ int main(){
         count++;
         ptr++;
     }
-    //cout<<prime(2);
+    cout<<prime(2);
      cout<<big( 3,6,1);
      int a = 10, b = 11, c = 12;
      int big = ( a > b)?((a >c)?a:c): ((b > c)?b:c);
